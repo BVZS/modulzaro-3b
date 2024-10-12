@@ -7,11 +7,42 @@ public class Ember {
     private int kor;
     private ArrayList<String> idegenNyelvek = new ArrayList<>();
 
+    public Ember(String nev, int kor) {
+        this.nev = nev;
+        this.kor = kor;
+        this.idegenNyelvek = new ArrayList<>();
+    }
+
     public Ember(String nev, int kor, ArrayList<String> idegenNyelvek) {
         this.nev = nev;
         this.kor = kor;
         this.idegenNyelvek = idegenNyelvek;
     }
+
+
+
+    private void megjelenit(String uzenet) {
+        System.out.print(uzenet);
+    }
+
+    public void bemutatkozik() {
+        String s = "Sziasztok! Én " + this.nev + " vagyok, " + this.kor + " éves. ";
+        if (this.idegenNyelvek.isEmpty()) {
+            s += "Nem beszélek idegennyelveket.";
+        } else {
+            s += "Ezeken a nyelveken beszélek: ";
+            for (String nyelv : this.idegenNyelvek) {
+                s += nyelv + ", ";
+            }
+            //s.substring(0, s.length() - 2);
+        }
+        s += "\n";
+        megjelenit(s);
+    }
+
+
+
+
 
     public String getNev() {
         return nev;
