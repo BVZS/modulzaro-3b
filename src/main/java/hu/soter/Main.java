@@ -15,5 +15,7 @@ public class Main {
         ember2.bemutatkozik();
         ember3.bemutatkozik();
 
+        ember1.ujNyelv("Görög");
+
     }
 }

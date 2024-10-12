@@ -40,7 +40,12 @@ public class Ember {
         megjelenit(s);
     }
 
-
+    public void ujNyelv(String nyelv) {
+        if (!this.idegenNyelvek.contains(nyelv)) {
+            idegenNyelvek.add(nyelv);
+            megjelenit("(" + this.nev + ") Megtanultam egy új nyelvet: " + nyelv + ".\n");
+        }
+    }
 
 
 
